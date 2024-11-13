@@ -9,10 +9,10 @@ fn add_item(studnet_list: &mut Vec<StudentDirectory>, item: StudentDirectory) {
     studnet_list.push(item);
 }
 
-// A function that borrows the grocery list reference and displays its contents
-fn display_list(grocery_list: &Vec<StudentDirectory>) {
+// A function that borrows the student list reference and displays its contents
+fn display_list(student_list: &Vec<StudentDirectory>) {
     println!("Student List:");
-    for item in grocery_list {
+    for item in student_list {
         match item {
             StudentDirectory::StudnetAM(name) => println!("9am Student: {}", name),
             StudentDirectory::Student12(name) => println!("noon Stduent: {}", name),
@@ -21,12 +21,12 @@ fn display_list(grocery_list: &Vec<StudentDirectory>) {
     }
 }
 
-// Main function
+
 fn main() {
     // Immutable variable
     let max_items = 5;
 
-    // Mutable grocery list (using Vec)
+    // Mutable student list (using Vec)
     let mut student_list: Vec<StudentDirectory> = Vec::new();
 
     // Loop to add items until reaching max_items
